@@ -38,7 +38,7 @@ describe('UUID API', () => {
         },
         willRespondWith: {
           status: 200,
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json; charset=utf-8' },
           body: {
             uuid: term({
               generate: '356c1f6a-896f-491e-ad5d-23b522961d26',
@@ -70,7 +70,7 @@ describe('UUID API', () => {
         },
         willRespondWith: {
           status: 200,
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json; charset=utf-8' },
           body: {
             uuid: '356c1f6a-896f-491e-ad5d-23b522961d26',
             isValid: true
@@ -105,7 +105,7 @@ describe('UUID API', () => {
         },
         willRespondWith: {
           status: 200,
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json; charset=utf-8' },
           body: {
             uuid: 'genericstring',
             isValid: false
