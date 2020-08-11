@@ -1,5 +1,5 @@
-import {Router, Request, Response} from 'express'
-import {UUIDRouter} from './uuid/routes/uuid.router'
+import { Router, Request, Response } from 'express'
+import { UUIDRouter } from './uuid/routes/uuid.router'
 
 const router: Router = Router()
 
