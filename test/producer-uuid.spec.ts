@@ -1,10 +1,8 @@
 import { Verifier } from '@pact-foundation/pact'
 import { IndexRouter } from '../src/controllers/v0/index.router'
 import { UUIDValidate } from '../src/controllers/v0/uuid/models/UUIDValidate'
-import { uuid } from 'uuidv4'
 import express from 'express'
 import bodyParser from 'body-parser'
-import path = require("path")
 
 const port = 8221
 

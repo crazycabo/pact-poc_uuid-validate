@@ -1,9 +1,8 @@
 import * as chai from 'chai'
 import chaiAsPromised from 'chai-as-promised'
-import chaiHttp from 'chai-http'
 import path = require("path")
 import * as request from 'superagent'
-import { Pact, Interaction, Matchers } from '@pact-foundation/pact'
+import { Pact, Matchers } from '@pact-foundation/pact'
 
 const expect = chai.expect
 const { term } = Matchers
@@ -39,7 +38,7 @@ describe('UUID API', () => {
         },
         willRespondWith: {
           status: 200,
-          headers: { 'Content-Type': 'application/json; charset=utf-8' },
+          headers: { 'Content-Type': 'application/json' },
           body: {
             uuid: term({
               generate: '356c1f6a-896f-491e-ad5d-23b522961d26',
@@ -71,7 +70,7 @@ describe('UUID API', () => {
         },
         willRespondWith: {
           status: 200,
-          headers: { 'Content-Type': 'application/json; charset=utf-8' },
+          headers: { 'Content-Type': 'application/json' },
           body: {
             uuid: '356c1f6a-896f-491e-ad5d-23b522961d26',
             isValid: true
@@ -106,7 +105,7 @@ describe('UUID API', () => {
         },
         willRespondWith: {
           status: 200,
-          headers: { 'Content-Type': 'application/json; charset=utf-8' },
+          headers: { 'Content-Type': 'application/json' },
           body: {
             uuid: 'genericstring',
             isValid: false
