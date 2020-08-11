@@ -74,7 +74,7 @@ describe('UUID API', () => {
           headers: { 'Content-Type': 'application/json; charset=utf-8' },
           body: {
             uuid: '356c1f6a-896f-491e-ad5d-23b522961d26',
-            validate: true
+            isValid: true
           }
         }
       })
@@ -83,7 +83,7 @@ describe('UUID API', () => {
     it('return validation true', done => {
       const validBody = {
         uuid: '356c1f6a-896f-491e-ad5d-23b522961d26',
-        validate: true
+        isValid: true
       }
 
       request.get(`http://localhost:${process.env.MOCK_PORT}/api/v0/uuid/validate/356c1f6a-896f-491e-ad5d-23b522961d26`)
@@ -109,7 +109,7 @@ describe('UUID API', () => {
           headers: { 'Content-Type': 'application/json; charset=utf-8' },
           body: {
             uuid: 'genericstring',
-            validate: false
+            isValid: false
           }
         }
       })
@@ -118,7 +118,7 @@ describe('UUID API', () => {
     it('return validation false', done => {
       const invalidBody = {
         uuid: 'genericstring',
-        validate: false
+        isValid: false
       }
 
       request.get(`http://localhost:${process.env.MOCK_PORT}/api/v0/uuid/validate/genericstring`)
