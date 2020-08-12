@@ -12,7 +12,7 @@
     "build": "npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
     "test": "mocha",
     "publish:pact": "node ./test/pact-publish.js",
-    "verify:pact": "mocha --grep 'UUID producer'"
+    "verify:pact": "mocha --grep 'UUID validator'"
   },
   "keywords": [],
   "author": "Brian Lloyd Smith @ NGC",
